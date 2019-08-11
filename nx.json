@@ -1,0 +1,24 @@
+{
+  "npmScope": "animals",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "dashboard-e2e": {
+      "tags": []
+    },
+    "dashboard": {
+      "tags": []
+    },
+    "core-data": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    }
+  }
+}
