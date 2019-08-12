@@ -12,7 +12,7 @@ import { AnimalsActionTypes } from './animals.actions';
 @Injectable()
 export class AnimalsFacade {
   allAnimals$ = this.store.pipe(select(selectAllAnimals));
-  selectedAnimals$ = this.store.pipe(select(selectCurrentAnimal));
+  selectedAnimal$ = this.store.pipe(select(selectCurrentAnimal));
 
   mutations$ = this.actions$
     .pipe(

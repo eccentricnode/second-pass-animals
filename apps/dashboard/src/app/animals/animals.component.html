@@ -1,1 +1,18 @@
-<p>animals works!</p>
+<div class="wrapper">
+    <div class="list-grid">
+        <animals-animals-list
+            [animals]="animals$ | async"
+            (selected)="selectAnimal($event)"
+            (deleted)="removeAnimal($event)">
+        </animals-animals-list>
+    </div>
+
+    <div class="details-grid">
+        <animals-animal-details
+            [group]="form"
+            [animal]="selectedAnimal$ | async"
+            (submitted)="saveAnimal($event)"
+            (cancelled)="reset($event)">
+        </animals-animal-details>
+    </div>
+</div>
