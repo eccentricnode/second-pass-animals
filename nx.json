@@ -1,5 +1,5 @@
 {
-  "npmScope": "animals",
+  "npmScope": "app",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -18,6 +18,9 @@
       "tags": []
     },
     "material": {
+      "tags": []
+    },
+    "core-state": {
       "tags": []
     }
   }

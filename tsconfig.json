@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@animals/core-data": ["libs/core-data/src/index.ts"],
-      "@animals/material": ["libs/material/src/index.ts"]
+      "@animals/material": ["libs/material/src/index.ts"],
+      "@app/core-state": ["libs/core-state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
