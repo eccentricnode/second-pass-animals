@@ -5,7 +5,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
 import { reducers } from '.';
-import { environment } from '../environments/environment';
 import { AnimalsEffects } from './animals/animals.effects';
 
 
@@ -14,10 +13,9 @@ import { AnimalsEffects } from './animals/animals.effects';
     CommonModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([AnimalsEffects]),
-    !environment.production ? StoreDevtoolsModule.instrument({
+    StoreDevtoolsModule.instrument({
       maxAge: 10,
-      logOnly: environment.production,
-    }) : [],
+    }),
   ],
 })
 export class CoreStateModule {}

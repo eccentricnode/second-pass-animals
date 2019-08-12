@@ -4,7 +4,7 @@ import { Animal } from '@animals/core-data';
 @Component({
   selector: 'animals-animals-list',
   templateUrl: './animals-list.component.html',
-  styleUrls: ['./animals-list.component.css']
+  styleUrls: ['./animals-list.component.scss']
 })
 export class AnimalsListComponent {
   @Input() animals: Animal[];
