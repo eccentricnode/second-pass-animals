@@ -1,12 +1,5 @@
-import { ActionReducerMap } from '@ngrx/store';
+export { CoreStateModule } from './lib/core-state.module';
 
-import * as fromAnimals from './lib/animals/animals.reducer';
+// Export Facades here...
 
-export interface AppState {
-    animals: fromAnimals.AnimalsState;
-}
-
-export const reducers: ActionReducerMap<AppState> = {
-    animals: fromAnimals.animalsReducer,
-}
-
+export { AnimalsFacade } from './lib/animals/animals.facade';

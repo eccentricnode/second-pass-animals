@@ -11,7 +11,7 @@ export const initialState: AnimalsState = adapter.getInitialState({
   selectedAnimalId: null,
 });
 
-export function reducer(state: AnimalsState = initialState, action: AnimalsAction): AnimalsState {
+export function animalsReducer(state: AnimalsState = initialState, action: AnimalsAction): AnimalsState {
   switch (action.type) {
     case AnimalsActionTypes.ANIMAL_SELECTED: {
       return Object.assign({}, state, { selectedAnimalId: action.payload });
