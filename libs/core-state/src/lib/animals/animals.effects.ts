@@ -53,7 +53,7 @@ export class AnimalsEffects {
 
   @Effect() deleteAnimal$ = this.dataPersistence.pessimisticUpdate(AnimalsActionTypes.DELETE_ANIMAL, {
     run: (action: DeleteAnimal, state: AnimalsState) => {
-      return this.animalsService.create(action.payload).pipe(map((res: Animal) => new AnimalDeleted(res)));
+      return this.animalsService.delete(action.payload.id).pipe(map(_ => new AnimalDeleted(action.payload)));
     },
 
     onError: (action: DeleteAnimal, error) => {

@@ -17,7 +17,7 @@ export class AnimalsService {
   }
 
   getUrlForId(id) {
-    return `${this.getUrl}${id}`;
+    return `${this.getUrl()}/${id}`;
   }
 
   all() {
@@ -34,6 +34,6 @@ export class AnimalsService {
   }
 
   delete(animalId) {
-    return this.delete(this.getUrlForId(animalId)) ;
+    return this.http.delete(this.getUrlForId(animalId));
   }
 }

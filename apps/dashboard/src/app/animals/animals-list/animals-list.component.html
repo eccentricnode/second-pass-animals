@@ -6,7 +6,7 @@
                 (click)="select(animal)">
                 <h4 mat-line>{{animal.name}}</h4>
                 <span mat-line>{{animal.continent}}</span>
-                <button mat-mini-fab *ngIf="!readonly" (click)="remove(animal);$event.stopImmediatePropogation();">
+                <button mat-mini-fab *ngIf="!readonly" (click)="remove(animal);$event.stopImmediatePropagation();">
                     <mat-icon>clear</mat-icon>
                 </button>
             </mat-list-item>

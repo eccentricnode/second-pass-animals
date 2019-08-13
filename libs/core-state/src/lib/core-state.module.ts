@@ -6,16 +6,20 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { reducers } from '.';
 import { AnimalsEffects } from './animals/animals.effects';
+import { AnimalsFacade } from './animals/animals.facade';
 
 
 @NgModule({
   imports: [
     CommonModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([AnimalsEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 10,
     }),
+    EffectsModule.forRoot([AnimalsEffects]),
   ],
+  providers: [
+    AnimalsFacade
+  ]
 })
 export class CoreStateModule {}
