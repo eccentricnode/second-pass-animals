@@ -8,12 +8,16 @@ mat-sidenav {
 }
 
 .mat-sidenav-container {
-    background: whitesmoke;
+    background: #424242;
     flex: 1;
 }
 
+mat-icons {
+    color: #ffffff;
+}
+
 .nav-link {
-    color: rgba(0, 0, 0, .54);
+    color: #fff;
     display: flex;
     align-items: center;
     padding-top: 5px;
